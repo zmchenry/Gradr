@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_list_wrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/custom_title"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:background="@drawable/blank_button"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" >
+    </TextView>
+
+    <!-- *********************** -->
+    <!-- *** TOOLBAR LAYOUT **** -->
+    <!-- *********************** -->
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignBottom="@id/custom_title"
+        android:layout_alignLeft="@id/custom_title"
+        android:layout_alignRight="@id/custom_title"
+        android:layout_alignTop="@id/custom_title"
+        android:background="#000000"
+        android:visibility="gone" 
+        android:focusable="false"
+        android:focusableInTouchMode="false">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/semester_hint"
+            android:inputType="textCapWords"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:selectAllOnFocus="true"
+            android:scrollHorizontally="true" />
+
+        <Button
+            android:id="@+id/remove"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/delete" />
+
+        <Button
+            android:id="@+id/replace"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/remove"
+            android:background="@drawable/accept" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_list_wrapper"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/empty_list_title"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/black_assignment_list_button"
+        android:paddingLeft="5dp"
+        android:textAlignment="center" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/list_item_title"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="5dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+    
+    <TextView
+        android:id="@+id/list_item_title_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_toRightOf="@id/list_item_title"
+        android:layout_alignTop="@id/list_item_title"
+        android:layout_alignBottom="@id/list_item_title"
+        android:layout_alignBaseline="@id/list_item_title"
+        android:textColor="#FFFFFF"
+        android:layout_marginLeft="15dp"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/list_item_title_grade"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignRight="@id/empty_list_title"
+        android:gravity="center_vertical"
+        android:layout_marginRight="60dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" />
+
+    <!-- *********************** -->
+    <!-- *** TOOLBAR LAYOUT **** -->
+    <!-- *********************** -->
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignBottom="@id/custom_title"
+        android:layout_alignLeft="@id/custom_title"
+        android:layout_alignRight="@id/custom_title"
+        android:layout_alignTop="@id/custom_title"
+        android:background="#000000"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:longClickable="false"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/semester_hint"
+            android:inputType="textCapWords"
+            android:selectAllOnFocus="true"
+            android:textColor="#FFFFFF"
+            android:longClickable="false"
+            android:textSize="15sp" />
+        
+        <EditText
+            android:id="@+id/edit_text_weight"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:hint="@string/weight_hint"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:layout_toRightOf="@id/edit_text"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:longClickable="false"
+            android:textAlignment="textStart" />
+
+        <Button
+            android:id="@+id/remove"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/delete"
+            android:longClickable="false" />
+
+        <Button
+            android:id="@+id/replace"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/remove"
+            android:background="@drawable/accept"
+            android:longClickable="false" />
+    </RelativeLayout>
+
+</RelativeLayout>

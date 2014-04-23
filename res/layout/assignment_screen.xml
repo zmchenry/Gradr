@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="20dp"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/class_main_display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/assignments_background_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/main_screen_gradebook_launcher"
+            android:contentDescription="@string/class_screen_display"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/assignments_overall_gpa_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="20dp"
+            android:padding="2dp"
+            android:text="@string/class_gpa_text"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/assignments_overall_gpa_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/assignments_overall_gpa_text"
+            android:layout_alignRight="@id/assignments_overall_gpa_text"
+            android:layout_below="@id/assignments_overall_gpa_text"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textSize="21sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+    <ExpandableListView
+        android:id="@+id/category_names"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="5dp"
+        android:textAlignment="center" >
+    </ExpandableListView>
+
+    <LinearLayout
+        android:id="@+id/add_category"
+        android:layout_width="wrap_content"
+        android:layout_height="65dp"
+        android:layout_gravity="center"
+        android:background="@drawable/generic_dashed_box"
+        android:orientation="horizontal" >
+
+        <EditText
+            android:id="@+id/add_category_edit"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:hint="@string/category_hint"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp" 
+            android:layout_weight="50"
+            android:scrollHorizontally="true">
+        </EditText>
+        
+         <EditText
+            android:id="@+id/add_category_weight"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:hint="@string/weight_hint"
+            android:textColor="#FFFFFF" 
+            android:layout_weight="25"
+            android:textSize="12sp"
+            android:inputType="numberDecimal"
+            android:scrollHorizontally="true">
+        </EditText>
+
+        <Button
+            android:id="@+id/add_category_button"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:text="@string/add_category_text"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:layout_weight="25" >
+
+        </Button>
+    </LinearLayout>
+</LinearLayout>

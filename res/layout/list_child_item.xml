@@ -1,0 +1,100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custom_list_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/list_child_display"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:background="#000000" >
+
+        <TextView
+            android:id="@+id/custom_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="left"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:id="@+id/custom_grade_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:paddingRight="10dp"
+            android:textColor="#FFFFFF" />
+    </RelativeLayout>
+
+    <!-- *********************** -->
+    <!-- *** TOOLBAR LAYOUT **** -->
+    <!-- *********************** -->
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:layout_alignBottom="@+id/list_child_display"
+        android:layout_alignLeft="@id/list_child_display"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:background="#000000"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone" >
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:inputType="textCapWords"
+            android:scrollHorizontally="true"
+            android:selectAllOnFocus="true"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/edit_grade_text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/edit_text"
+            android:hint="@string/grade_hint"
+            android:inputType="numberDecimal"
+            android:selectAllOnFocus="true"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp" 
+            android:scrollHorizontally="true"/>
+
+        <Button
+            android:id="@+id/remove"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/delete" />
+
+        <Button
+            android:id="@+id/replace"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/remove"
+            android:background="@drawable/accept" />
+    </RelativeLayout>
+
+</RelativeLayout>

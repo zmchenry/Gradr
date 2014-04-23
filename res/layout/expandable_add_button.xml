@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_assignment"
+    android:layout_width="wrap_content"
+    android:layout_height="45dp"
+    android:layout_gravity="center"
+    android:background="@drawable/generic_dashed_box"
+    android:orientation="horizontal"
+    android:layout_marginLeft="30dp">
+
+    <EditText
+        android:id="@+id/add_assignment_edit"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="45"
+        android:hint="@string/assignment_hint"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp"
+        android:scrollHorizontally="true" >
+    </EditText>
+
+    <EditText
+        android:id="@+id/add_assignment_grade"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="30"
+        android:hint="@string/grade_hint"
+        android:singleLine="true"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="15sp" 
+        android:inputType="numberDecimal"
+        android:scrollHorizontally="true">
+    </EditText>
+
+    <Button
+        android:id="@+id/add_assignment_button"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:layout_weight="25"
+        android:background="@android:color/transparent"
+        android:text="@string/add_category_text"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
